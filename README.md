@@ -3,7 +3,7 @@
 > 검색기반과 koGPT2를 이용한 답변과 **cosine similarity**를 기준으로 한 최종 답변을 보여줍니다.
 
 ## Framework
-`Flask`, 'Ajax'
+`Flask`, `Ajax`
 ## Getting Started
 ### Clone Repository
 ```
