@@ -46,9 +46,9 @@ $ python app.py
 ## API 설명
 ### 1) / [GET]
 template/index.html을 렌더링함
-### 2) /answer [POST]
-사용자의 질문에 대해 KoGPT2을 이용해 응답함
-
+### 2) /answer [POST]=> 웹데모용
+사용자의 질문에 대해 응답함(Threshold=0.65)<br>
+**Cosine similarity**>=0.65: 검색기반,<br> **Cosine similarity**<0.65: KoGPT2 기반 문장생성<br>
 검색기반과 문장생성 결과, cosine similarity, 최종응답(S=검색기반, G=문장생성)을 html에 보냄
 
 **Request 예시**
@@ -73,5 +73,12 @@ template/index.html을 렌더링함
  검색 기반: 운이 나빴던 거라고 생각해요.
  kogpt로 문장생성: 정말 당황스러우셨겠어요. 하지만 미리 걱정하는 건 자신을 더 잘 이해할 수 있는 방법이에요.*(S) 운이 나빴던 거라고 생각해요."
 ```
+### 3) /unity_answer[POST]=> Unity용
 
 
+## Reference
+검색기반챗봇: [트랜스포머 기반 챗봇](https://wikidocs.net/89786) <br>
+KoGPT2: [Simple Chit-Chat based on KoGPT2](https://github.com/haven-jeon/KoGPT2-chatbot)
+
+## Dataset
+[웰니스 대화 데이터셋](https://aihub.or.kr/aihubdata/data/view.do?currMenu=120&topMenu=100&aihubDataSe=extrldata&dataSetSn=267)
